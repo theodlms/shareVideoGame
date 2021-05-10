@@ -23,7 +23,7 @@ $fifa->desc = "FIFA 21 est un jeu vidéo de football développé par EA Canada";
 $fifa->releaseYear = "5 octobre 2020";
 $fifa->platform = "PC - PS4 - XBOX";
 $fifa->price = "69.99€";
-$fifa->img = "https://image.api.playstation.com/vulcan/img/rnd/202101/1315/1zfTY2JW41HdDTGJC00Go4nk.png";
+$fifa->img = "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60";
 
 // Game 2:
 $fortnite = new Game();
@@ -33,7 +33,7 @@ $fortnite->desc = "Fortnite est un Battle Royal en ligne développé par Epic Ga
 $fortnite->releaseYear = "21 juillet 2017";
 $fortnite->platform = "PC - PS4 - XBOX";
 $fortnite->price = "GRATUIT";
-$fortnite->img = "https://cdn2.unrealengine.com/battle-pass-chapter-2-season-6-1920x1080-dc8eb73dc494.jpg";
+$fortnite->img = "https://images.unsplash.com/photo-1589241062272-c0a000072dfa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60";
 
 // Game 3:
 $battlefield5 = new Game();
@@ -43,7 +43,7 @@ $battlefield5->desc = "Battlefield V est un jeu vidéo de tir à la première pe
 $battlefield5->releaseYear = "4 septembre 2018";
 $battlefield5->platform = "PC - PS4 - XBOX";
 $battlefield5->price = "14.99€";
-$battlefield5->img = "https://image.api.playstation.com/vulcan/ap/rnd/202010/0813/TGIIghw30d2pJUuZDdKkni6O.png";
+$battlefield5->img = "https://images.unsplash.com/photo-1605811784653-ee4e230bd981?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60";
 
 // Other objects créations
 $items = array($fifa, $fortnite, $battlefield5);
@@ -105,10 +105,11 @@ $items = array($fifa, $fortnite, $battlefield5);
       <div class="row">
         <div class="col-lg-4 mb-4">
           <div class="card">
-            <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+            <img src="https://images.unsplash.com/photo-1586891042194-248a5e10b422?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">Assassin Creed Valhalla</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+              <p class="card-text">Assassin's Creed Valhalla est un jeu vidéo d'action-aventure et de rôle</p>
+              <p class="display-5">69.99€</p>
               <a href="" class="btn btn-outline-secondary btn-sm">Lire plus</a>
             </div>
           </div>
@@ -116,10 +117,11 @@ $items = array($fifa, $fortnite, $battlefield5);
 
         <div class="col-lg-4 mb-4">
           <div class="card">
-            <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+            <img src="https://images.unsplash.com/photo-1616595364501-01c9eb5f4366?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">The last of Us partie 2</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+              <p class="card-text">The Last of Us Part II est un jeu vidéo d’action-aventure en vue à la troisième personne, de type survival horror et se déroulant dans un monde post-apocalyptique.</p>
+              <p class="display-5">29.99€</p>
               <a href="" class="btn btn-outline-secondary btn-sm">Lire plus</a>
             </div>
           </div>
@@ -127,10 +129,11 @@ $items = array($fifa, $fortnite, $battlefield5);
 
         <div class="col-lg-4 mb-4">
           <div class="card">
-            <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+            <img src="https://images.unsplash.com/photo-1469032923574-4f1413034019?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">GTA 5</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+              <p class="card-text">Grand Theft Auto V est un jeu vidéo d'action-aventure, développé par Rockstar North et édité par Rockstar Games.</p>
+              <p class="display-5">29.99€</p>
               <a href="" class="btn btn-outline-secondary btn-sm">Lire plus</a>
             </div>
           </div>
@@ -145,6 +148,7 @@ $items = array($fifa, $fortnite, $battlefield5);
               <div class="card-body">
                 <h5 class="card-title"><?= $oneItem->name ?></h5>
                 <p class="card-text"><?= $oneItem->desc ?></p>
+                <p class="display-5"><?= $oneItem->price ?></p>
                 <a href="" class="btn btn-outline-secondary btn-sm">Lire plus</a>
               </div>
             </div>
