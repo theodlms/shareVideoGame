@@ -45,8 +45,38 @@ $battlefield5->platform = "PC - PS4 - XBOX";
 $battlefield5->price = "14.99€";
 $battlefield5->img = "https://images.unsplash.com/photo-1605811784653-ee4e230bd981?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60";
 
+// Game 4:
+$rocketLeague = new Game();
+$rocketLeague->id = 4;
+$rocketLeague->name = "Rocket League";
+$rocketLeague->desc = "Rocket League est un jeu vidéo de sport développé et édité par Psyonix.";
+$rocketLeague->releaseYear = "7 juillet 2015";
+$rocketLeague->platform = "PC - PS4 - XBOX";
+$rocketLeague->price = "GRATUIT";
+$rocketLeague->img = "https://images.unsplash.com/photo-1572425914445-addf19106140?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60";
+
+// Game 5:
+$theForest = new Game();
+$theForest->id = 5;
+$theForest->name = "The Forest";
+$theForest->desc = "The Forest est un jeu vidéo de survie développé et édité par Endnight Games. Le jeu se déroule sur une péninsule isolée et boisée";
+$theForest->releaseYear = "30 mai 2014";
+$theForest->platform = "PC - PS4 - XBOX";
+$theForest->price = "19.99€";
+$theForest->img = "https://images.unsplash.com/photo-1554129351-dd3625ed5f30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60";
+
+// Game 6:
+$ghostOfTsushima = new Game();
+$ghostOfTsushima->id = 6;
+$ghostOfTsushima->name = "Ghost of Tsushima";
+$ghostOfTsushima->desc = "Le jeu se passe au Japon, en 1274 et s'inspire de l'Histoire de cette époque, sans pour autant chercher à la retranscrire fidèlement.";
+$ghostOfTsushima->releaseYear = "17 juillet 2020";
+$ghostOfTsushima->platform = "PC - PS4 - XBOX";
+$ghostOfTsushima->price = "49.99€";
+$ghostOfTsushima->img = "https://images.unsplash.com/photo-1600924779117-927b4f81457d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=60";
+
 // Other objects créations
-$items = array($fifa, $fortnite, $battlefield5);
+$items = array($fifa, $fortnite, $battlefield5, $rocketLeague, $theForest, $ghostOfTsushima);
 ?>
 
 <!doctype html>
