@@ -1,84 +1,14 @@
 <?php
-
-use Entity\Game;
-use Entity\User;
-
 require '../vendor/autoload.php';
 
-// USERS
+use Entity\Game;
+use ludk\Persistence\ORM;
 
-// USER  1:
-$userHomer = new User();
-$userHomer->id = 1;
-$userHomer->nickname = "Homer";
-$userHomer->password = "simpson";
-
-// GAMES
-
-// Game 1:
-$fifa = new Game();
-$fifa->id = 1;
-$fifa->name = "FIFA 2021";
-$fifa->desc = "FIFA 21 est un jeu vidéo de football développé par EA Canada";
-$fifa->releaseYear = "5 octobre 2020";
-$fifa->platform = "PC - PS4 - XBOX";
-$fifa->price = "69.99€";
-$fifa->img = "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60";
-
-// Game 2:
-$fortnite = new Game();
-$fortnite->id = 2;
-$fortnite->name = "Fortnite";
-$fortnite->desc = "Fortnite est un Battle Royal en ligne développé par Epic Games";
-$fortnite->releaseYear = "21 juillet 2017";
-$fortnite->platform = "PC - PS4 - XBOX";
-$fortnite->price = "GRATUIT";
-$fortnite->img = "https://images.unsplash.com/photo-1589241062272-c0a000072dfa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60";
-
-// Game 3:
-$battlefield5 = new Game();
-$battlefield5->id = 3;
-$battlefield5->name = "Battlefield 5";
-$battlefield5->desc = "Battlefield V est un jeu vidéo de tir à la première personne développé par DICE et édité par Electronic Arts.";
-$battlefield5->releaseYear = "4 septembre 2018";
-$battlefield5->platform = "PC - PS4 - XBOX";
-$battlefield5->price = "14.99€";
-$battlefield5->img = "https://images.unsplash.com/photo-1605811784653-ee4e230bd981?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60";
-
-// Game 4:
-$rocketLeague = new Game();
-$rocketLeague->id = 4;
-$rocketLeague->name = "Rocket League";
-$rocketLeague->desc = "Rocket League est un jeu vidéo de sport développé et édité par Psyonix.";
-$rocketLeague->releaseYear = "7 juillet 2015";
-$rocketLeague->platform = "PC - PS4 - XBOX";
-$rocketLeague->price = "GRATUIT";
-$rocketLeague->img = "https://images.unsplash.com/photo-1572425914445-addf19106140?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60";
-
-// Game 5:
-$theForest = new Game();
-$theForest->id = 5;
-$theForest->name = "The Forest";
-$theForest->desc = "The Forest est un jeu vidéo de survie développé et édité par Endnight Games. Le jeu se déroule sur une péninsule isolée et boisée";
-$theForest->releaseYear = "30 mai 2014";
-$theForest->platform = "PC - PS4 - XBOX";
-$theForest->price = "19.99€";
-$theForest->img = "https://images.unsplash.com/photo-1554129351-dd3625ed5f30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60";
-
-// Game 6:
-$ghostOfTsushima = new Game();
-$ghostOfTsushima->id = 6;
-$ghostOfTsushima->name = "Ghost of Tsushima";
-$ghostOfTsushima->desc = "Le jeu se passe au Japon, en 1274 et s'inspire de l'Histoire de cette époque, sans pour autant chercher à la retranscrire fidèlement.";
-$ghostOfTsushima->releaseYear = "17 juillet 2020";
-$ghostOfTsushima->platform = "PC - PS4 - XBOX";
-$ghostOfTsushima->price = "49.99€";
-$ghostOfTsushima->img = "https://images.unsplash.com/photo-1600924779117-927b4f81457d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=60";
-
-// Other objects créations
-$items = array($fifa, $fortnite, $battlefield5, $rocketLeague, $theForest, $ghostOfTsushima);
+require __DIR__ . '/../vendor/autoload.php';
+$orm = new ORM(__DIR__ . '/../Resources');
+$gameRepo = $orm->getRepository(Game::class);
+$items = $gameRepo->findAll();
 ?>
-
 <!doctype html>
 <html lang="en">
 
