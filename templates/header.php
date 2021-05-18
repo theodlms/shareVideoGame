@@ -37,12 +37,12 @@
                 <?php
                 if (isset($_SESSION['user'])) {
                 ?>
-                    <a href="?action=logout" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn" style="margin-left:30px;">Logout</a>
+                    <a href="?action=logout" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn" style="margin-left:30px;">Se déconnecter</a>
                 <?php
                 } else {
                 ?>
-                    <a href="?action=login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="login-btn" style="margin-left:30px;">Log in</a>
-                    <a href="?action=register" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" id="signup-btn" style="margin-left:30px;" git>Sign up</a>
+                    <a href="?action=login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="login-btn" style="margin-left:30px;">Se connecter</a>
+                    <a href="?action=register" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" id="signup-btn" style="margin-left:30px;" git>S'inscrire</a>
                 <?php
                 }
                 ?>
