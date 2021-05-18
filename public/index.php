@@ -47,7 +47,7 @@ switch ($action) {
         include "../templates/LoginForm.php";
       }
     } else {
-      include "../templates/LoginForm.php";
+      include "../templates/loginForm.php";
     }
     break;
   case 'new':
