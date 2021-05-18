@@ -2,6 +2,7 @@
 
 namespace Entity;
 
+use Entity\User;
 use ludk\Utils\Serializer;
 
 class Game
@@ -13,6 +14,7 @@ class Game
     public $platform;
     public $img;
     public $price;
+    public User $user;
 
     use Serializer;
 }
