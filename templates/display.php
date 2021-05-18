@@ -24,7 +24,6 @@ include __DIR__ . "/header.php";
             <?php
             }
             ?>
-
         </div>
     </div>
 </section>
