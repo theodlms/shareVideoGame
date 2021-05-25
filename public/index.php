@@ -3,6 +3,7 @@
 use Entity\Game;
 use Entity\User;
 use ludk\Persistence\ORM;
+use Controller\HomeController;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -14,13 +15,6 @@ $manager = $orm->getManager();
 
 $gameRepo = $orm->getRepository(Game::class);
 $userRepo = $orm->getRepository(User::class);
-$items = array();
-
-if (isset($_GET['search'])) {
-  $items = $gameRepo->findBy(array("name" => '%' . $_GET['search'] . '%'));
-} else {
-  $items = $gameRepo->findAll();
-}
 
 $action = $_GET["action"] ?? "display";
 switch ($action) {
@@ -80,29 +74,45 @@ switch ($action) {
     }
     break;
   case 'new':
+    if (
+      isset($_SESSION['user'])
+      && isset($_POST['name'])
+      && isset($_POST['desc'])
+      && isset($_POST['content'])
+      && isset($_POST['languageId'])
+    ) {
+      $errorMsg = NULL;
+      if (strlen(trim($_POST['name'])) < 2) {
+        $errorMsg = "Your title should have at least 2 characters.";
+      } else if (strlen(trim($_POST['desc'])) < 2) {
+        $errorMsg = "Your desc should have at least 2 characters.";
+      } else if (strlen(trim($_POST['platform'])) == 0) {
+        $errorMsg = "Your content shouldn't be empty.";
+      } else if (intval($_POST['price']) == 0) {
+        $errorMsg = "You should choose a price.";
+      }
+      if ($errorMsg) {
+        include "../templates/createForm.php";
+      } else {
+        $language = $langRepo->find($_POST['languageId']);
+        $newGame = new Game();
+        $newGame->name = trim($_POST['name']);
+        $newGame->desc = trim($_POST['desc']);
+        $newGame->platform = trim($_POST['platform']);
+        $newGame->price = trim($_POST['price']);
+        $newGame->user = $_SESSION['user'];
+        $manager->persist($newCode);
+        $manager->flush();
+        header('Location: ?action=display');
+      }
+    } else {
+      include "../templates/CreateForm.php";
+    }
     break;
   case 'display':
   default:
-    $codes = [];
-    if (isset($_GET["search"])) {
-      $strToSearch = $_GET["search"];
-      $posOfTheAtCharacter = strpos($strToSearch, "@");
-
-      if ($posOfTheAtCharacter === 0) {
-        $userName = substr($strToSearch, 1);
-        $users = $userRepo->findBy(array("nickname" => $userName));
-        if (count($users) == 1) {
-          $games = $gameRepo->findBy(array("user" => $users[0]->id));
-        }
-      } else {
-        $games = $gameRepo->findBy(
-          array("desc" => "%$strToSearch%")
-        );
-      }
-    } else {
-      $games = $gameRepo->findAll();
-    }
-    include "../templates/display.php";
+    $controller = new HomeController();
+    $controller->display();
     break;
 } ?>
 
