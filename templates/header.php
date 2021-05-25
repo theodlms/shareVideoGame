@@ -14,7 +14,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
         <div class=" container">
-            <a class="navbar-brand" href="/">ShareGames</a>
+            <a class="navbar-brand" href="index.php">ShareGames</a>
             <?php
             if (isset($_SESSION['user'])) {
             ?>

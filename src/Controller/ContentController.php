@@ -8,12 +8,13 @@ class ContentController
 {
     public function create()
     {
+        global $manager;
         if (
             isset($_SESSION['user'])
             && isset($_POST['name'])
+            && isset($_POST['platform'])
+            && isset($_POST['price'])
             && isset($_POST['desc'])
-            && isset($_POST['content'])
-            && isset($_POST['languageId'])
         ) {
             $errorMsg = NULL;
             if (strlen(trim($_POST['name'])) < 2) {
@@ -34,12 +35,12 @@ class ContentController
                 $newGame->platform = trim($_POST['platform']);
                 $newGame->price = trim($_POST['price']);
                 $newGame->user = $_SESSION['user'];
-                $manager->persist($newCode);
+                $manager->persist($newGame);
                 $manager->flush();
                 header('Location: ?action=display');
             }
         } else {
-            include "../templates/CreateForm.php";
+            include "../templates/createForm.php";
         }
     }
 }
